@@ -310,8 +310,6 @@ function SendData($Url,$filePath,$key){
                 )
         )
     );
-    //ストリームラッパコンテキスト内容を出力(動作確認用)
-
     $result = file_get_contents($Url,FALSE,$context);
     return $result;
 
