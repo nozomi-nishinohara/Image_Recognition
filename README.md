@@ -399,7 +399,7 @@ void Single_Recognition()
 ```php
 function single(){
     $key = "file";
-    $filePath = array("/Users/belldata/Desktop/check_image/test.jpg");
+    $filePath = array("{{FilePath}}");
     $url = "http://{URL}/{PREFIX}/api/v1/single_recognition";
     SendData($url,$filePath,$key);
 }
@@ -537,7 +537,10 @@ void Maluti_Recognition()
 ```php
 function multi(){
     $key = "files";
-    $filePath = array("/Users/belldata/Desktop/check_image/test.jpg","/Users/belldata/Desktop/check_image/test5.jpg");
+    $filePath = array(
+        "{{FilePath}}",
+        "{{FilePath}}"
+        );
     $url = 'http://{URL}/{PREFIX}/api/v1/multi_recognition';
     SendData($url,$filePath,$key);
 }
